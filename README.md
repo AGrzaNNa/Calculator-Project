@@ -1,70 +1,7 @@
-# Getting Started with Create React App
+Głównym celem zadania było zakodowanie, ostylowanie i zaprogramowanie obsługi kalkulatora, opartego na projekcie dostępnym pod podanym adresem.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+W celu realizacji zadania skorzystałem z programu WebStorm oraz biblioteki React. Aby zapewnić responsywność, wykorzystałem funkcje CSS takie jak flex oraz align-items: center, które umożliwiły wyśrodkowanie kalkulatora na ekranie, niezależnie od rozmiaru, bez jego przycinania. Wizualne elementy kalkulatora zostały odwzorowane zgodnie z przesłanym przykładem, używając programu GIMP i narzędzia pipety do uzyskania dokładnych kolorów. Animacje podczas najechania i kliknięcia zostały zaimplementowane przy użyciu odpowiednich efektów przejścia (transition) oraz pseudoklas :hover, co pozwoliło osiągnąć oczekiwany efekt.
 
-## Available Scripts
+Główna funkcjonalność opiera się na metodzie handleClick, oraz innych powiązanych metodach, które zależą od rodzaju operacji, jaką chcemy wykonać. Metoda ta odczytuje cel, który został kliknięty na podstawie przypisanych imion (names) dla poszczególnych przycisków, i na tej podstawie podejmuje odpowiednie działania.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Napotkałem kilka problemów podczas implementacji. Jednym z nich było zapewnienie, aby znaki nie nadpisywały się nawzajem. Rozwiązaniem było odpowiednie manipulowanie tekstem w celu dodawania znaków na końcu lub usuwania ich. Kolejnym problemem było zabezpieczenie przed próbą dzielenia przez zero, co mogło prowadzić do awarii programu. Dodatkowo, musiałem zapewnić obsługę dużych liczb, ograniczając ich długość w wyświetlaczach. Wykorzystałem w tym celu formatowanie tekstu w CSS za pomocą word-break: all, co pozwoliło przenieść tekst na kolejną linię w wyświetlaczu w przypadku potrzeby, umożliwiając operacje na dużych liczbach. Pozostałe mniejsze problemy również zostały rozwiązane, aby zapewnić prawidłowe działanie kalkulatora.

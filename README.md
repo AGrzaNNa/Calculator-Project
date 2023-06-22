@@ -1,2 +1,7 @@
-# Calculator-Project
-Calculator Project With React
+Głównym celem zadania było zakodowanie, ostylowanie i zaprogramowanie obsługi kalkulatora, opartego na projekcie dostępnym pod podanym adresem.
+
+W celu realizacji zadania skorzystałem z programu WebStorm oraz biblioteki React. Aby zapewnić responsywność, wykorzystałem funkcje CSS takie jak flex oraz align-items: center, które umożliwiły wyśrodkowanie kalkulatora na ekranie, niezależnie od rozmiaru, bez jego przycinania. Wizualne elementy kalkulatora zostały odwzorowane zgodnie z przesłanym przykładem, używając programu GIMP i narzędzia pipety do uzyskania dokładnych kolorów. Animacje podczas najechania i kliknięcia zostały zaimplementowane przy użyciu odpowiednich efektów przejścia (transition) oraz pseudoklas :hover, co pozwoliło osiągnąć oczekiwany efekt.
+
+Główna funkcjonalność opiera się na metodzie handleClick, oraz innych powiązanych metodach, które zależą od rodzaju operacji, jaką chcemy wykonać. Metoda ta odczytuje cel, który został kliknięty na podstawie przypisanych imion (names) dla poszczególnych przycisków, i na tej podstawie podejmuje odpowiednie działania.
+
+Napotkałem kilka problemów podczas implementacji. Jednym z nich było zapewnienie, aby znaki nie nadpisywały się nawzajem. Rozwiązaniem było odpowiednie manipulowanie tekstem w celu dodawania znaków na końcu lub usuwania ich. Kolejnym problemem było zabezpieczenie przed próbą dzielenia przez zero, co mogło prowadzić do awarii programu. Dodatkowo, musiałem zapewnić obsługę dużych liczb, ograniczając ich długość w wyświetlaczach. Wykorzystałem w tym celu formatowanie tekstu w CSS za pomocą word-break: all, co pozwoliło przenieść tekst na kolejną linię w wyświetlaczu w przypadku potrzeby, umożliwiając operacje na dużych liczbach. Pozostałe mniejsze problemy również zostały rozwiązane, aby zapewnić prawidłowe działanie kalkulatora.

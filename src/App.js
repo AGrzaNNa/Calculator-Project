@@ -14,7 +14,7 @@ function App() {
     if(operation==="0" && result==="0" || operation==="NaN") {
       return;
     }
-    else if(operation==="" && ['*', '-', '+', '/'].includes(clickedChar)){
+    else if(operation==="" | operation==="-" && ['*', '-', '+', '/'].includes(clickedChar)){
       return;
     }
     else if (lastChar.match(/[-+*/%]/) && clickedChar.match(/[-+*/%]/)) {
